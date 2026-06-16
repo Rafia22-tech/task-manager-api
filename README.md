@@ -1,53 +1,81 @@
-# Task Manager Authentication Authorization
+# Task Manager Authentication 
 
-A backend API built with Node.js and Express.js.
+A backend-only **Node.js + Express.js Task Manager API** project with CRUD operations, JWT-based authentication, role-based authorization, and bcrypt password hashing.
 
-## Features
+This project is designed for testing with **Postman**. No frontend/webpage is required.
 
-- CRUD Operations
-- JWT Authentication
-- Role-Based Authorization
-- Password Hashing with bcrypt
-- Admin and User Roles
-- Postman Testing
+## Project Features
 
-## Technologies
+* User Signup & Login
+* JWT Authentication
+* Role-Based Authorization
+* Password Hashing using bcryptjs
+* CRUD Operations for Tasks
+* Admin Task Management
+* User-Specific Task Access
+* JSON File Storage
+* Postman API Testing
 
-- Node.js
-- Express.js
-- JWT
-- bcryptjs
-- Postman
+## Technologies Used
+
+* Node.js
+* Express.js
+* JSON Web Token (JWT)
+* bcryptjs
+* Postman
+
+## Project Structure
+
+```txt
+task-manager-authentication-authorization
+│
+├── server.js
+├── users.json
+├── tasks.json
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
 ## API Endpoints
 
-### Authentication
+| Method | Endpoint           | Description           |
+| ------ | ------------------ | --------------------- |
+| POST   | /signup            | Register User         |
+| POST   | /login             | Login User            |
+| GET    | /tasks             | View Tasks            |
+| POST   | /tasks             | Create Task (Admin)   |
+| PUT    | /tasks/:id         | Update Task (Admin)   |
+| DELETE | /tasks/:id         | Delete Task (Admin)   |
+| GET    | /admin/users-tasks | View Users with Tasks |
 
-POST /signup
+## Authentication
 
-POST /login
+JWT token is generated during login and must be included in protected routes using Bearer Token authentication.
 
-### Tasks
-
-GET /tasks
-
-POST /tasks
-
-PUT /tasks/:id
-
-DELETE /tasks/:id
-
-## Roles
+## Authorization
 
 ### Admin
-- Create Tasks
-- Update Tasks
-- Delete Tasks
-- View All Tasks
+
+* Create Tasks
+* Update Tasks
+* Delete Tasks
+* View All Tasks
+* View Users and Assigned Tasks
 
 ### User
-- View Assigned Tasks Only
+
+* Login
+* View Own Assigned Tasks Only
 
 ## Testing
 
-All APIs were tested using Postman.
+All API endpoints were tested using Postman.
+
+## Project Summary
+
+This project demonstrates Authentication and Authorization using JWT and bcrypt in Node.js. Admin users can manage tasks and monitor assigned work, while regular users can only access their own tasks.
+
+## Author
+
+**Created By:** Rafia
