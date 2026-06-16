@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Prepare report",
+    "description": "Prepare monthly sales report",
+    "assignedTo": 2,
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "title": "Prepare Assignment",
+    "description": "Prepare lab report",
+    "assignedTo": 3,
+    "status": "pending"
+  }
+]
